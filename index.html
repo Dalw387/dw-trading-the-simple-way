@@ -5,44 +5,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Trading the Simple Way — Free Ebook | DW Gold Trading</title>
 <meta name="description" content="Free plain-English beginner’s guide to gold trading — risk first, always. Download Trading the Simple Way by Dale Wright / DW Gold Trading."/>
-<meta http-equiv="refresh" content="0; url=Trading-the-Simple-Way.pdf"/>
+<link rel="icon" href="./favicon.png" type="image/png"/>
 <style>
-  :root { --gold:#D4AF37; --bg:#0a0a0a; --cream:#F7F2E8; }
+  :root {
+    --gold: #D4AF37;
+    --gold-deep: #A67C22;
+    --bg: #0B0B0A;
+    --cream: #F6F0E5;
+    --muted: #9A917E;
+  }
   * { box-sizing: border-box; }
-  body { margin:0; min-height:100vh; font-family: system-ui, -apple-system, Segoe UI, sans-serif;
-    background: radial-gradient(ellipse at top, #1a1508 0%, var(--bg) 55%);
-    color: var(--cream); display:flex; align-items:center; justify-content:center; padding:24px; }
-  .card { max-width:520px; width:100%; text-align:center; border:1px solid rgba(212,175,55,.45);
-    border-radius:16px; padding:40px 28px; background:rgba(0,0,0,.55); }
-  h1 { font-size:1.75rem; margin:0 0 8px; color:var(--gold); letter-spacing:.02em; }
-  .sub { opacity:.85; margin:0 0 28px; line-height:1.45; }
-  a.btn { display:inline-block; background:linear-gradient(180deg,#e8c766,#D4AF37 40%,#a88620);
-    color:#111; font-weight:700; text-decoration:none; padding:14px 28px; border-radius:999px;
-    box-shadow:0 8px 24px rgba(212,175,55,.25); }
-  .meta { margin-top:28px; font-size:.9rem; opacity:.75; line-height:1.5; }
-  .meta a { color:var(--gold); }
+  body {
+    margin: 0; min-height: 100vh;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212,175,55,.18), transparent 55%),
+      radial-gradient(ellipse at bottom, #14110a 0%, var(--bg) 60%);
+    color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    padding: 28px 18px;
+  }
+  .card {
+    max-width: 560px; width: 100%; text-align: center;
+    border: 1px solid rgba(212,175,55,.5);
+    border-radius: 18px; padding: 44px 30px 36px;
+    background: rgba(8,8,7,.72);
+    box-shadow: 0 0 0 1px rgba(212,175,55,.12), 0 24px 60px rgba(0,0,0,.45);
+    position: relative;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 8px;
+    border: 1px solid rgba(212,175,55,.22); border-radius: 12px; pointer-events: none;
+  }
+  .logo { width: 120px; height: auto; margin: 0 auto 10px; display: block; }
+  .olt {
+    letter-spacing: .14em; text-transform: uppercase; font-size: .68rem;
+    color: var(--muted); margin: 0 0 18px;
+  }
+  .eyebrow {
+    letter-spacing: .22em; text-transform: uppercase; font-size: .68rem;
+    color: var(--gold); margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.15rem); margin: 0 0 10px;
+    color: var(--cream); font-weight: 700; letter-spacing: .01em; line-height: 1.15;
+  }
+  .rule {
+    width: 72px; height: 2px; margin: 14px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .sub { opacity: .88; margin: 0 0 28px; line-height: 1.5; font-size: .98rem; }
+  a.btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #e8c766, #D4AF37 42%, #a88620);
+    color: #111; font-weight: 700; text-decoration: none;
+    padding: 16px 32px; border-radius: 999px; font-size: 1.05rem;
+    box-shadow: 0 10px 28px rgba(212,175,55,.28); margin: 6px;
+  }
+  a.btn:hover { filter: brightness(1.06); }
+  a.btn.ghost {
+    background: transparent; color: var(--gold);
+    border: 1px solid rgba(212,175,55,.55); box-shadow: none; font-weight: 600;
+    padding: 12px 22px; font-size: .92rem;
+  }
+  .meta { margin-top: 30px; font-size: .92rem; opacity: .82; line-height: 1.65; }
+  .meta a { color: var(--gold); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .fine { margin-top: 18px; font-size: .72rem; color: var(--muted); line-height: 1.45; }
 </style>
 </head>
 <body>
   <main class="card">
-    <p style="letter-spacing:.2em; text-transform:uppercase; font-size:.7rem; color:var(--gold); margin:0 0 12px;">DW Gold Trading</p>
+    <img class="logo" src="./logo-crown.png" alt="DW Gold Trading crown logo"/>
+    <p class="olt">One Legged Trader</p>
+    <p class="eyebrow">DW Gold Trading · Free lead magnet</p>
+    <div class="rule"></div>
     <h1>Trading the Simple Way</h1>
-    <p class="sub">Your free plain-English beginner’s guide to gold trading — risk first, always. Download starts automatically.</p>
-    <a class="btn" href="Trading-the-Simple-Way.pdf" download="Trading-the-Simple-Way.pdf">Download the free ebook</a>
-    <p class="meta">WhatsApp <a href="https://wa.me/447774449868">07774 449868</a><br/>
-    <a href="https://dwgoldtrading.com">dwgoldtrading.com</a></p>
+    <p class="sub">Your free plain-English beginner’s guide to gold trading — risk first, always.<br/>Education only · Capital at risk · No profit promises.</p>
+    <a class="btn" id="dl" href="./Trading-the-Simple-Way.pdf" download="Trading-the-Simple-Way.pdf">Download the free ebook (PDF)</a>
+    <br/>
+    <a class="btn ghost" href="./Trading-the-Simple-Way.pdf" target="_blank" rel="noopener">Open in browser</a>
+    <p class="meta">
+      WhatsApp <a href="https://wa.me/447774449868">07774 449868</a><br/>
+      <a href="https://www.dwgoldtrading.com">dwgoldtrading.com</a> ·
+      <a href="https://www.dwgoldtrading.com/contact-us/">Contact</a> ·
+      <a href="mailto:dwtrading@post.com">dwtrading@post.com</a><br/>
+      Community partner support: <a href="https://t.me/blakeytrades_support">t.me/blakeytrades_support</a>
+    </p>
+    <p class="fine">Title credit: Karen. Educational lead magnet from Dale Wright / DW Gold Trading.<br/>CFDs & leveraged products carry a high risk of rapid loss.</p>
   </main>
   <script>
-    (function(){
+    (function () {
       try {
         var u = new URL(location.href);
         if (u.searchParams.get('nodl') === '1') return;
-        var a = document.createElement('a');
-        a.href = 'Trading-the-Simple-Way.pdf';
-        a.download = 'Trading-the-Simple-Way.pdf';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        setTimeout(function () {
+          var a = document.createElement('a');
+          a.href = './Trading-the-Simple-Way.pdf';
+          a.download = 'Trading-the-Simple-Way.pdf';
+          a.rel = 'noopener';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }, 400);
       } catch (e) {}
     })();
   </script>
