@@ -23,8 +23,8 @@ jobs:
             TOTAL=$(cat pdf-b64/part-*.txt | wc -c)
             echo "Total base64 bytes: $TOTAL from $(ls pdf-b64/part-*.txt | wc -l) parts"
             if [ "$TOTAL" -lt 700000 ]; then
-              echo "Incomplete base64 payload ($TOTAL < 700000) — refusing decode"
-              exit 1
+              echo "Waiting for remaining pdf-b64 parts ($TOTAL < 700000)"
+              exit 0
             fi
             cat $(ls pdf-b64/part-*.txt | sort) | tr -d '\n\r[:space:]' | base64 -d > Trading-the-Simple-Way.pdf
           fi
@@ -40,6 +40,10 @@ jobs:
       - name: Commit PDF if changed
         run: |
           set -euo pipefail
+          if [ ! -f Trading-the-Simple-Way.pdf ]; then
+            echo "No PDF produced yet — skip commit"
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Trading-the-Simple-Way.pdf
